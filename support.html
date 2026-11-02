@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MyVi app support and user guide for creating visions, journaling, stories, achievements, and progress statistics.">
+    <title>MyVi - App Support & User Guide</title>
+    <style>
+        :root {
+            --background: #fffaf5;
+            --surface: #ffffff;
+            --text: #241f1b;
+            --muted: #746b65;
+            --accent: #f27b2f;
+            --accent-dark: #c85c17;
+            --accent-soft: #fff0e4;
+            --border: #eee3da;
+            --radius: 18px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 28px 16px 40px;
+            color: var(--text);
+            background: var(--background);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 720px; margin: 0 auto; }
+
+        header {
+            padding: 28px 10px 34px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 8px 0 6px;
+            font-size: clamp(32px, 8vw, 46px);
+            letter-spacing: -.04em;
+        }
+
+        .subtitle {
+            max-width: 540px;
+            margin: 0 auto;
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            padding: 26px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--surface);
+            box-shadow: 0 8px 24px rgba(72, 43, 22, .05);
+        }
+
+        h2 {
+            margin: 0 0 18px;
+            font-size: 21px;
+            letter-spacing: -.02em;
+        }
+
+        h3 {
+            margin: 0 0 4px;
+            font-size: 16px;
+        }
+
+        p { margin: 0 0 12px; }
+        p:last-child { margin-bottom: 0; }
+        .muted { color: var(--muted); }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .feature {
+            padding: 16px;
+            border-radius: 14px;
+            background: var(--accent-soft);
+        }
+
+        .feature p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .steps {
+            display: grid;
+            gap: 16px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            gap: 12px;
+            align-items: start;
+        }
+
+        .number {
+            display: grid;
+            width: 30px;
+            height: 30px;
+            place-items: center;
+            border-radius: 50%;
+            color: #fff;
+            background: var(--accent);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .step p { color: var(--muted); font-size: 14px; }
+
+        code {
+            padding: 2px 6px;
+            border-radius: 6px;
+            color: var(--accent-dark);
+            background: var(--accent-soft);
+            font-size: .92em;
+        }
+
+        .tip {
+            padding: 15px 16px;
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            background: #fff8f1;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        details {
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        details:first-of-type { padding-top: 0; }
+        details:last-of-type { padding-bottom: 0; border-bottom: 0; }
+
+        summary {
+            cursor: pointer;
+            font-weight: 650;
+        }
+
+        details p { margin: 9px 0 0; color: var(--muted); font-size: 14px; }
+
+        .contact {
+            text-align: center;
+            background: var(--accent-soft);
+        }
+
+        .contact a {
+            color: var(--accent-dark);
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .contact a:hover { text-decoration: underline; }
+
+        footer {
+            padding-top: 10px;
+            color: var(--muted);
+            font-size: 12px;
+            text-align: center;
+        }
+
+        @media (max-width: 520px) {
+            body { padding: 16px 12px 30px; }
+            .card { padding: 21px 18px; }
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <div class="eyebrow">MyVi support</div>
+            <h1>Turn intentions into progress.</h1>
+            <p class="subtitle">A practical guide to creating visions, recording the journey, and celebrating what you accomplish.</p>
+        </header>
+
+        <section class="card">
+            <h2>What you can do in MyVi</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>Ongoing</h3>
+                    <p>Keep active visions visible and open a vision card to see its details.</p>
+                </div>
+                <div class="feature">
+                    <h3>Achieved</h3>
+                    <p>Keep a visual record of completed visions, including your proof photo and reflection.</p>
+                </div>
+                <div class="feature">
+                    <h3>Stats.</h3>
+                    <p>Review achievement rate, time to achievement, views, and vision progress.</p>
+                </div>
+                <div class="feature">
+                    <h3>All</h3>
+                    <p>Browse a date-organized timeline of journal entries, vision comments, and achievements.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Getting started</h2>
+            <ol class="steps">
+                <li class="step">
+                    <span class="number">1</span>
+                    <div>
+                        <h3>Create a vision</h3>
+                        <p>On the <strong>Ongoing</strong> tab, tap <code>+ Add Vision</code>. Add a title, an optional description, and a photo from your camera or gallery. Tap <code>Make Your Vision Happen</code> to save it.</p>
+                    </div>
+                </li>
+                <li class="step">
+                    <span class="number">2</span>
+                    <div>
+                        <h3>Track your progress</h3>
+                        <p>Open a vision card to review it. Add notes or comments as you make progress; comments can include images and can be edited later.</p>
+                    </div>
+                </li>
+                <li class="step">
+                    <span class="number">3</span>
+                    <div>
+                        <h3>Edit a vision</h3>
+                        <p>Open the vision card and choose the edit option. You can update its title, description, or image without losing its existing progress.</p>
+                    </div>
+                </li>
+                <li class="step">
+                    <span class="number">4</span>
+                    <div>
+                        <h3>Complete a vision</h3>
+                        <p>When your goal is complete, choose the completion action, upload a proof photo, and optionally describe the accomplishment. The vision then moves to <strong>Achieved</strong>.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="card">
+            <h2>Stories and daily reflection</h2>
+            <p>Tap the MyVi icon in the header when a story is available. Stories show your active visions one at a time, with an automatic six-second progress cycle.</p>
+            <p>Tap the sides of the screen to move backward or forward, or pause while reading. Open comments to read the conversation, add a comment, or edit one of your existing comments.</p>
+            <div class="tip">Each active vision becomes available as a story again after 24 hours. Achieved visions are not included in the story cycle.</div>
+        </section>
+
+        <section class="card">
+            <h2>Journal</h2>
+            <p>Open the <strong>All</strong> tab and tap <code>+ Add Journal</code> to write a title and reflection. You can attach a photo from your gallery or take one with your camera.</p>
+            <p>Choose a mood color while writing from the journal timeline. Tap a journal entry twice to edit it. Use the timeline filters to view all entries, only diary entries, or only vision activity.</p>
+        </section>
+
+        <section class="card">
+            <h2>Settings, reminders, and your data</h2>
+            <p>From the settings panel, you can enable daily vision reminders and choose the reminder time. If reminders do not appear, check that MyVi has permission to send notifications in your device settings.</p>
+            <p>The settings panel also includes <strong>Download Your Data</strong>. Use this to export or import your MyVi data and preserve your visions, images, comments, and journal entries.</p>
+            <p class="muted">The photobook option is currently marked as coming soon.</p>
+        </section>
+
+        <section class="card">
+            <h2>Frequently asked questions</h2>
+            <details>
+                <summary>Why is my story icon not active?</summary>
+                <p>Stories are created from active visions that have not been viewed in the last 24 hours. Create an ongoing vision or wait until the cooldown has ended.</p>
+            </details>
+            <details>
+                <summary>Why can’t I complete a vision?</summary>
+                <p>A completion photo is required. Grant camera or photo-library permission, select an image, and try again.</p>
+            </details>
+            <details>
+                <summary>Can I remove an image before saving?</summary>
+                <p>Yes. Tap the image or its remove control while editing a vision or journal entry, then save your changes.</p>
+            </details>
+            <details>
+                <summary>Where is my content stored?</summary>
+                <p>MyVi keeps visions and journal entries on the device so they remain available when you return to the app. Use the data controls in Settings to create a portable backup.</p>
+            </details>
+        </section>
+
+        <section class="card contact">
+            <h2>Need more help?</h2>
+            <p>For bugs, questions, or feedback, contact us and include your device model and the steps that caused the problem.</p>
+            <p><a href="mailto:lautorni@outlook.de">lautorni@outlook.de</a></p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 MyVi. App Support &amp; User Guide.</p>
+        </footer>
+    </main>
+</body>
+</html>
